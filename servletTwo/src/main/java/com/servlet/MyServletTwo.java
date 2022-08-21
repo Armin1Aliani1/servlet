@@ -5,14 +5,17 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class MyServletTwo implements Servlet {
+    ServletConfig config = null;
+
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
+        this.config = servletConfig;
         System.out.println("Yes!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
     }
 
     @Override
     public ServletConfig getServletConfig() {
-        return null;
+        return config;
     }
 
     @Override
@@ -20,12 +23,17 @@ public class MyServletTwo implements Servlet {
         ServletContext context = request.getServletContext();
         String country = context.getInitParameter("country");
 
+        ServletConfig config = getServletConfig();
+        String title = config.getInitParameter("title");
+
         response.setContentType("text/html");
         try {
             PrintWriter out = response.getWriter();
 
             out.println("<h3>Bye there</h3>");
             out.println("<p><b>" + country + "</b></p>");
+            out.println("<head><title>" + title + "</title></head>");
+            out.println("<h5>" + title + "</h5>");
 
             out.close();
         } catch (IOException e) {

@@ -10,13 +10,29 @@
     <param-value>Iran</param-value>
   </context-param>
 
+  <listener>
+    <listener-class>com.servlet.MyAppAttributeListener</listener-class>
+  </listener>
+
+  <listener>
+    <listener-class>com.servlet.MyAppContextListener</listener-class>
+  </listener>
+
   <servlet>
     <servlet-name>s1</servlet-name>
     <servlet-class>com.servlet.MyServletOne</servlet-class>
+    <init-param>
+      <param-name>title</param-name>
+      <param-value>My servlet one</param-value>
+    </init-param>
   </servlet>
   <servlet>
     <servlet-name>s2</servlet-name>
     <servlet-class>com.servlet.MyServletTwo</servlet-class>
+    <init-param>
+      <param-name>title</param-name>
+      <param-value>My servlet two</param-value>
+    </init-param>
   </servlet>
   <servlet-mapping>
     <servlet-name>s1</servlet-name>
