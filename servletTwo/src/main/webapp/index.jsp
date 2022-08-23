@@ -14,6 +14,6 @@
     <p>Current time : </p><%= java.util.Calendar.getInstance().getTime() %>
     <br>
     <%! int count = 10; %>
-    <% out.println("Number is : " + count); %>
+    <% out.println("Number is : " + count + count); %>
 </body>
 </html>

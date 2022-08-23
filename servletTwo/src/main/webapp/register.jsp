@@ -17,6 +17,8 @@
 <jsp:useBean id="user" class="com.practice.domain.User"/>
 <jsp:setProperty name="user" property="*"/>
 
+<br>
+
 <%
     ConsoleBeen.print(user);
 %>
