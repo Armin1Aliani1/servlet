@@ -5,10 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-    <form action="profile.jsp" method="get">
-        <label for="name">Full name</label>
-        <input id="name" type="text" name="name">
-        <input type="submit" value="OK">
+    <form action="register.jsp" method="get">
+        <label for="fullName">Full name : </label>
+        <input id="fullName" type="text" name="fullName"required>
+        <label for="username">Username : </label>
+        <input id="username" type="text" name="username" required>
+        <label for="password">Password : </label>
+        <input id="password" type="password" name="password" required>
+        <input type="submit" name="submit" value="OK">
     </form>
 </body>
 </html>
